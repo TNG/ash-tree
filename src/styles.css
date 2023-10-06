@@ -1,0 +1,78 @@
+/* SPDX-FileCopyrightText: TNG Technology Consulting GmbH <https://www.tngtech.com> */
+/* SPDX-FileCopyrightText: Leslie Lazzarino <leslie.lazzarino@tngtech.com> */
+/* SPDX-FileCopyrightText: Benedikt Richter <benedikt.richter@tngtech.com> */
+
+/* SPDX-License-Identifier: Apache-2.0 */
+
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+.app-root {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-items: center;
+}
+
+.tree-box {
+    margin: 10vh auto;
+    width: 35vw;
+}
+
+.fancyTreeItemLabel {
+    height: 24px;
+}
+
+.fancyTreeItemLabel:hover {
+    background-color: hsl(220, 41%, 75%);
+    cursor: pointer;
+}
+
+.fancyTreeItemLabelChildrenOfSelected {
+    background-color: hsl(220, 41%, 92%);
+    border-bottom: 1px hsl(220, 41%, 92%) solid;
+}
+
+.fancyTreeItemLabelSelected {
+    background-color: hsl(220, 41%, 92%) !important;
+    border-bottom: 1px hsl(220, 41%, 92%) solid;
+}
+
+.fancyTreeItemLabelSelected:hover {
+    background-color: hsl(220, 41%, 75%) !important;
+}
+
+.fancyTreeExpandIconRoot {
+    width: 16px !important;
+    height: 24px !important;
+    padding: 0;
+    margin: 0;
+}
+
+.fancyTreeExpandIconRoot:hover {
+    background: hsl(220, 41%, 70%);
+}
+
+.fancyTreeNodeIcon {
+    width: 20px !important; /* !important to override the default width of the MUI component */
+    height: 20px !important; /* !important to override the default height of the MUI component */
+    padding-left: 2px;
+    padding-right: 2px;
+    margin-right: 4px;
+    color: hsl(220, 41%, 41%);
+}
+
+.fancyTreeLabelRoot {
+    display: flex;
+    align-items: center;
+}
+
+.fancyTreeLabelText {
+    padding-right: 5px;
+}

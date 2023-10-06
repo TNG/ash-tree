@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+# SPDX-FileCopyrightText: Leslie Lazzarino <leslie.lazzarino@tngtech.com>
+# SPDX-FileCopyrightText: Benedikt Richter <benedikt.richter@tngtech.com>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+. "$(dirname -- "$0")/_/husky.sh"
+
+./run_precommit.sh

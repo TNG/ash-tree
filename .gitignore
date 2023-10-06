@@ -1,0 +1,38 @@
+# SPDX-FileCopyrightText: TNG Technology Consulting GmbH <https://www.tngtech.com>
+# SPDX-FileCopyrightText: Leslie Lazzarino <leslie.lazzarino@tngtech.com>
+# SPDX-FileCopyrightText: Benedikt Richter <benedikt.richter@tngtech.com>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# dependencies
+/react-one-tree/node_modules
+/react-one-tree/build
+/node_modules
+
+
+# testing
+/coverage
+/react-one-tree/coverage
+
+# production
+/build
+
+# release
+/release
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+yarn-debug.log*
+yarn-error.log*
+
+.idea
+/.vscode
+/react-tree.iml
+/test-app.iml
+/react-one-tree.iml
+/react-one-tree/notices

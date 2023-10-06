@@ -1,0 +1,13 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Source: https://github.com/benedikt-richter/react-tree
+
+Files: NOTICE
+       *.json
+       *.json.gz
+       *.png
+       *.prettierrc
+       **.gitignore
+       **yarn.lock
+       .github/pull_request_template.md
+Copyright: TNG Technology Consulting GmbH <https://www.tngtech.com>
+License: Apache-2.0
