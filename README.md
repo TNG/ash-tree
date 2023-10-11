@@ -84,3 +84,5 @@ function BasicTree(): ReactElement {
 The styling can be adjusted; see the following example (`src/Components/FancyTree`):
 
 ![](docs/folder_tree_example.png)
+
+This is licensed under Apache-2.0.
