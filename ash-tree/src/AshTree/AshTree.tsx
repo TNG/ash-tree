@@ -14,12 +14,12 @@ import {
   NumberOfDisplayedNodesForTree,
   TreeNodeStyle,
 } from './types';
-import { ReactOneTreeNode, ReactOneTreeNodeData } from './ReactOneTreeNode';
+import { AshTreeNode, AshTreeNodeData } from './AshTreeNode';
 import { getTreeNodeProps } from './utils/get-tree-node-props';
 
 const DEFAULT_MAX_TREE_DISPLAYED_NODES = 5;
 
-interface ReactOneTreeProps {
+interface AshTreeProps {
   nodes: NodesForTree;
   getTreeNodeLabel: (
     nodeName: string,
@@ -41,9 +41,9 @@ interface ReactOneTreeProps {
   breakpoints?: Set<string>;
 }
 
-export function ReactOneTree(props: ReactOneTreeProps): ReactElement | null {
+export function AshTree(props: AshTreeProps): ReactElement | null {
   // eslint-disable-next-line testing-library/render-result-naming-convention
-  const treeNodeProps: Array<ReactOneTreeNodeData> = getTreeNodeProps(
+  const treeNodeProps: Array<AshTreeNodeData> = getTreeNodeProps(
     props.nodes,
     '',
     props.expandedPaths,
@@ -77,7 +77,7 @@ export function ReactOneTree(props: ReactOneTreeProps): ReactElement | null {
           max={maxListLength}
           cardVerticalDistance={props.cardHeight}
           getListItem={(index: number): ReactElement => (
-            <ReactOneTreeNode
+            <AshTreeNode
               {...{
                 ...treeNodeProps[index],
                 expandedNodeIcon: props.expandedNodeIcon,

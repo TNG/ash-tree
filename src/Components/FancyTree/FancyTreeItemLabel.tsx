@@ -9,11 +9,11 @@ import React, { ReactElement } from 'react';
 import MuiBox from '@mui/material/Box';
 import MuiTypography from '@mui/material/Typography';
 import { DirectoryIcon, FileIcon } from './FancyTreeIcons';
-import { NodesForReactOneTree } from 'react-one-tree';
+import { NodesForAshTree } from 'ash-tree';
 
 export function getFancyTreeItemLabel(
   nodeName: string,
-  node: NodesForReactOneTree | 1,
+  node: NodesForAshTree | 1,
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   nodePath: string,
 ): ReactElement {

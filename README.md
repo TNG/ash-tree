@@ -14,7 +14,7 @@ fit the needs of the user. It is not meant to be a full-fledged file explorer, b
 
 ## API
 
-The package exposes the React component **ReactOneTree** with the following API:
+The package exposes the React component **AshTree** with the following API:
 
 * nodes: The nodes of the tree
     * It is a recursive data structure that allows to define the nodes of the tree and their relations.
@@ -39,7 +39,7 @@ It is produced by the following code (we omitted some unimportant details; for d
 
 
 ```
-import { ReactOneTreeExport as ReactOneTree } from 'react-one-tree';
+import { AshTreeExport as AshTree } from 'ash-tree';
 
 
 function BasicTree(): ReactElement {
@@ -60,7 +60,7 @@ function BasicTree(): ReactElement {
   }
 
   return (
-    <ReactOneTree
+    <AshTree
     expandedPaths={expandedPaths}
     isFileWithChildren={(path: string): boolean => Boolean(path)}
     onSelect={handleSelect}

@@ -5,14 +5,14 @@
 # SPDX-License-Identifier: Apache-2.0
 
 # dependencies
-/react-one-tree/node_modules
-/react-one-tree/build
+/ash-tree/node_modules
+/ash-tree/build
 /node_modules
 
 
 # testing
 /coverage
-/react-one-tree/coverage
+/ash-tree/coverage
 
 # production
 /build
@@ -34,5 +34,5 @@ yarn-error.log*
 /.vscode
 /react-tree.iml
 /test-app.iml
-/react-one-tree.iml
-/react-one-tree/notices
+/ash-tree.iml
+/ash-tree/notices

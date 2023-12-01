@@ -4,9 +4,9 @@
 //
 // SPDX-License-Identifier: Apache-2.0
 
-import { NodesForReactOneTree } from 'react-one-tree';
+import { NodesForAshTree } from 'ash-tree';
 
-export const testNodes: NodesForReactOneTree = {
+export const testNodes: NodesForAshTree = {
   '': {
     thirdParty: {
       'package_01.tr.gz': 1,

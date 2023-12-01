@@ -5,7 +5,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import React, { ReactElement } from 'react';
-import { ReactOneTree } from '../ReactOneTree';
+import { AshTree } from '../AshTree';
 import { render, screen } from '@testing-library/react';
 import { NodesForTree, PathPredicateForTree } from '../types';
 
@@ -37,7 +37,7 @@ export function renderVirtualizedTree(
   const mockOnSelect = jest.fn();
   const mockOnToggle = jest.fn();
   render(
-    <ReactOneTree
+    <AshTree
       expandedPaths={expandedPaths}
       isFileWithChildren={isFileWithChildren}
       onSelect={mockOnSelect}

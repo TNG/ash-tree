@@ -7,7 +7,7 @@
 import React, { ReactElement, useState } from 'react';
 import '../../styles.css';
 import { testNodes } from '../shared';
-import { ReactOneTree } from 'react-one-tree';
+import { AshTree } from 'ash-tree';
 
 export function BasicTree(): ReactElement {
   const [selectedPath, setSelectedPath] = useState<string>('/');
@@ -42,7 +42,7 @@ export function BasicTree(): ReactElement {
   return (
     <div className="tree-box">
       <h1>Basic Tree</h1>
-      <ReactOneTree
+      <AshTree
         expandedPaths={expandedPaths}
         isFileWithChildren={(path: string): boolean => Boolean(path)}
         onSelect={handleSelect}

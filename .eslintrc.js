@@ -18,7 +18,7 @@ module.exports = {
     },
     ecmaVersion: 2018,
     sourceType: 'module',
-    project: ['tsconfig.json', 'react-one-tree/tsconfig.json'],
+    project: ['tsconfig.json', 'ash-tree/tsconfig.json'],
   },
   parser: '@typescript-eslint/parser',
   extends: [
