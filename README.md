@@ -4,7 +4,7 @@
 
 <!-- SPDX-License-Identifier: Apache-2.0 -->
 
-# react-one-tree
+# ash-tree
 
 **Disclaimer:** This project is in a very early stage and not yet production-ready. 
 
