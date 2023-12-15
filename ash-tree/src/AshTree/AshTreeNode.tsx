@@ -13,7 +13,7 @@ import { isChildOfSelected, isSelected } from './utils/get-tree-node-props';
 const INDENT_PER_DEPTH_LEVEL = 12;
 const SIMPLE_NODE_EXTRA_INDENT = 28;
 
-export interface ReactOneTreeNodeData {
+export interface AshTreeNodeData {
   path: string;
   nodeName: string;
   node: NodesForTree | 1;
@@ -34,9 +34,7 @@ export interface ReactOneTreeNodeData {
   nodeHeight: number;
 }
 
-export function ReactOneTreeNode(
-  props: ReactOneTreeNodeData,
-): ReactElement | null {
+export function AshTreeNode(props: AshTreeNodeData): ReactElement | null {
   const marginRight =
     ((props.path.match(/\//g) || []).length - 1) * INDENT_PER_DEPTH_LEVEL +
     (!props.isExpandable ? SIMPLE_NODE_EXTRA_INDENT : 0);

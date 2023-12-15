@@ -50,7 +50,7 @@ This package is a React component written in TypeScript. The only further depend
 react-window. The repo ist structured on two levels:
 1. the root directory contains the developing package.json, including all scripts, dev dependencies and testing app 
    dependencies,
-2. the react-one-tree directory contains the source code of the virtualized tree component and its package.json, 
+2. the ash-tree directory contains the source code of the virtualized tree component and its package.json, 
    including no dev dependencies and meant to be distributed with the package.
 
 Prettier is used as a code formatter, eslint as a linter.

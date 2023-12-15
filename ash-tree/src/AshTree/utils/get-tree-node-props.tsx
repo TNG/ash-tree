@@ -7,7 +7,7 @@
 
 import React, { ReactElement } from 'react';
 import { PathPredicateForTree, NodesForTree } from '../types';
-import { ReactOneTreeNodeData } from '../ReactOneTreeNode';
+import { AshTreeNodeData } from '../AshTreeNode';
 
 export function getTreeNodeProps(
   nodes: NodesForTree,
@@ -23,12 +23,12 @@ export function getTreeNodeProps(
     path: string,
   ) => ReactElement,
   cardHeight: number,
-): Array<ReactOneTreeNodeData> {
+): Array<AshTreeNodeData> {
   const sortedNodeNames: Array<string> = Object.keys(nodes).sort(
     getSortFunction(nodes, isFileWithChildren, parentPath),
   );
 
-  let treeNodes: Array<ReactOneTreeNodeData> = [];
+  let treeNodes: Array<AshTreeNodeData> = [];
 
   for (const nodeName of sortedNodeNames) {
     const node = nodes[nodeName];

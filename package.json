@@ -11,7 +11,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "react-one-tree": "link:./react-one-tree/build/",
+    "ash-tree": "link:./ash-tree/build/",
     "web-vitals": "^3.3.2"
   },
   "devDependencies": {
@@ -48,23 +48,23 @@
     "setup": "yarn install && yarn build-package && yarn install",
     "update-package": "yarn build-package && yarn install",
     "start": "yarn update-package && react-scripts start",
-    "build-package": "cd react-one-tree && yarn install && tsc && cp ./src/ReactOneTree/styles.css  ./build/src/ReactOneTree/styles.css && cd .. && yarn generate-notice",
+    "build-package": "cd ash-tree && yarn install && tsc && cp ./src/AshTree/styles.css  ./build/src/AshTree/styles.css && cd .. && yarn generate-notice",
     "test-no-update": "yarn test-package-no-build && yarn test-app-no-update && yarn test-performance-no-update",
     "test": "yarn update-package && yarn test-package-no-build && yarn test-app-no-update && yarn test-performance-no-update",
-    "test-package-no-build": "cd react-one-tree && jest --coverage && cd ..",
-    "test-package": "cd react-one-tree && tsc && jest --coverage && cd ..",
+    "test-package-no-build": "cd ash-tree && jest --coverage && cd ..",
+    "test-package": "cd ash-tree && tsc && jest --coverage && cd ..",
     "test-app-no-update": "react-scripts test --testPathIgnorePatterns=performance.test.tsx --watchAll=false",
     "test-app": "yarn update-package && yarn test-app-no-update",
-    "lint": "eslint -c .eslintrc.js \"react-one-tree/src/**/*.{ts,tsx}\" --fix && eslint -c .eslintrc.js \"src/**/*.{ts,tsx}\" --fix",
-    "minify-and-size": "esbuild react-one-tree/build/src/index.js --bundle --outfile=minified-bundle.js && gzip-size minified-bundle.js && rm minified-bundle.js && rm minified-bundle.css",
+    "lint": "eslint -c .eslintrc.js \"ash-tree/src/**/*.{ts,tsx}\" --fix && eslint -c .eslintrc.js \"src/**/*.{ts,tsx}\" --fix",
+    "minify-and-size": "esbuild ash-tree/build/src/index.js --bundle --outfile=minified-bundle.js && gzip-size minified-bundle.js && rm minified-bundle.js && rm minified-bundle.css",
     "test-performance-no-update": "react-scripts test --testMatch='**/performance.test.tsx' --watchAll=false",
     "test-performance": "yarn update-package && yarn test-performance-no-update",
     "ci": "yarn setup && yarn lint && yarn test-no-update && yarn minify-and-size",
     "test-compile": "tsc -p ./",
     "prepare": "husky install",
     "generate-notice": "run-script-os",
-    "generate-notice:linux:darwin": "cd react-one-tree && mkdir -p notices && yarn licenses generate-disclaimer --ignore-platform --production > notices/notices.txt && cd ..",
-    "generate-notice:win32": "cd react-one-tree && IF NOT EXIST notices mkdir notices && yarn licenses generate-disclaimer --ignore-platform --production > notices/notices.txt && cd .."
+    "generate-notice:linux:darwin": "cd ash-tree && mkdir -p notices && yarn licenses generate-disclaimer --ignore-platform --production > notices/notices.txt && cd ..",
+    "generate-notice:win32": "cd ash-tree && IF NOT EXIST notices mkdir notices && yarn licenses generate-disclaimer --ignore-platform --production > notices/notices.txt && cd .."
   },
   "eslintConfig": {
     "extends": [
