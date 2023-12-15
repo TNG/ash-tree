@@ -32,7 +32,6 @@ yarn-error.log*
 
 .idea
 /.vscode
-/react-tree.iml
 /test-app.iml
 /ash-tree.iml
 /ash-tree/notices
