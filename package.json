@@ -12,7 +12,9 @@
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "ash-tree": "link:./ash-tree/build/",
-    "web-vitals": "^3.3.2"
+    "web-vitals": "^3.3.2",
+    "rc-tree": "^5.8.5",
+    "react-accessible-treeview": "^2.8.3"
   },
   "devDependencies": {
     "@testing-library/dom": "^9.3.1",
@@ -56,10 +58,13 @@
     "test-app-no-update": "react-scripts test --testPathIgnorePatterns=performance.test.tsx --watchAll=false",
     "test-app": "yarn update-package && yarn test-app-no-update",
     "lint": "eslint -c .eslintrc.js \"ash-tree/src/**/*.{ts,tsx}\" --fix && eslint -c .eslintrc.js \"src/**/*.{ts,tsx}\" --fix",
+    "compare-sizes": "yarn minify-and-size && yarn minify-and-size-react-accessible-treeview && yarn minify-and-size-rc-tree",
     "minify-and-size": "esbuild ash-tree/build/src/index.js --bundle --outfile=minified-bundle.js && gzip-size minified-bundle.js && rm minified-bundle.js && rm minified-bundle.css",
+    "minify-and-size-react-accessible-treeview": "esbuild node_modules/react-accessible-treeview/dist/react-accessible-treeview.esm.js --bundle --outfile=minified-bundle-react-accessible-treeview.js && gzip-size minified-bundle-react-accessible-treeview.js && rm minified-bundle-react-accessible-treeview.js",
+    "minify-and-size-rc-tree": "esbuild node_modules/rc-tree/lib/index.js --bundle --outfile=minified-bundle-rc-tree.js && gzip-size minified-bundle-rc-tree.js && rm minified-bundle-rc-tree.js",
     "test-performance-no-update": "react-scripts test --testMatch='**/performance.test.tsx' --watchAll=false",
     "test-performance": "yarn update-package && yarn test-performance-no-update",
-    "ci": "yarn setup && yarn lint && yarn test-no-update && yarn minify-and-size",
+    "ci": "yarn setup && yarn lint && yarn test-no-update && yarn compare-sizes",
     "test-compile": "tsc -p ./",
     "prepare": "husky install",
     "generate-notice": "run-script-os",
