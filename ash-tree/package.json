@@ -1,6 +1,6 @@
 {
   "name": "ash-tree",
-  "description": "React Ash Tree.",
+  "description": "A virtualized, flexible tree component for React",
   "license": "Apache-2.0",
   "version": "0.1.0",
   "private": true,
